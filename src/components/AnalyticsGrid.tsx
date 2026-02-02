@@ -1,4 +1,6 @@
-import AvgResponseTimeCard from "./grid-cards/AvgResponseTimeCard";
+import AvgResponseTimeFirewallCard from "./grid-cards/AvgResponseTimeFirewallCard";
+import AvgResponseTimeWorkflowCard from "./grid-cards/AvgResponseTimeWorkflowCard";
+import FirewallApiCallsCard from "./grid-cards/FirewallApiCallsCard";
 import QueriesBySourceCard from "./grid-cards/QueriesBySourceCard";
 import QueriesExecutedCard from "./grid-cards/QueriesExecutedCard";
 import UniqueLoginsCard from "./grid-cards/UniqueLoginsCard";
@@ -11,9 +13,9 @@ const AnalyticsGrid = () => {
       <UniqueLoginsCard />
       <QueriesExecutedCard />
       <QueriesBySourceCard />
-      <AvgResponseTimeCard />
-      <div className="analytics-grid-item"></div>
-      <div className="analytics-grid-item"></div>
+      <AvgResponseTimeWorkflowCard />
+      <FirewallApiCallsCard />
+      <AvgResponseTimeFirewallCard />
     </div>
   );
 };
