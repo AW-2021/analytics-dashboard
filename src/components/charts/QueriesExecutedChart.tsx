@@ -19,7 +19,7 @@ const QueriesExecutedChart = ({ data }: ChartProps) => {
     chart: {
       type: "column",
       backgroundColor: "transparent",
-      height: 300,
+      height: 210,
     },
     title: {
       text: "",

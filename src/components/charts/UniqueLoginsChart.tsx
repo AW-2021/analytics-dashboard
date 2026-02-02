@@ -19,7 +19,7 @@ const UniqueLoginsChart = ({ data }: ChartProps) => {
     chart: {
       type: "column",
       backgroundColor: "transparent",
-      height: 300,
+      height: 250,
     },
     title: {
       text: "",

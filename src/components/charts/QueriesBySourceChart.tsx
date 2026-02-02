@@ -19,7 +19,7 @@ const QueriesBySourceChart = ({ data }: ChartProps) => {
     chart: {
       type: "bar",
       backgroundColor: "transparent",
-      height: 300,
+      height: 240,
     },
     title: {
       text: "",
