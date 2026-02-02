@@ -3,6 +3,26 @@
 A analytics dashboard page built with React, TypeScript and Tailwind CSS that displays key metrics and visualizations for monitoring user activity, query execution, and system performance. Made as part of the Frontend Home Assignment – Dashboard
 Page for securiti.ai
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Tech Stack](#tech-stack)
+- [Setup Instructions](#setup-instructions)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [API Endpoints](#api-endpoints)
+- [Key Decisions and Trade-offs](#key-decisions-and-trade-offs)
+  - [TanStack Query (React Query)](#tanstack-query-react-query)
+  - [Tailwind CSS](#tailwind-css)
+  - [Highcharts](#highcharts)
+  - [Context API (for Time Period)](#context-api-for-time-period)
+  - [TypeScript](#typescript)
+  - [JSON Server](#json-server)
+  - [Accessibility](#accessibility)
+- [What I Would Improve With More Time](#what-i-would-improve-with-more-time)
+- [Approximate Time Spent](#approximate-time-spent)
+- [UI Screenshots](#ui-screenshots)
+
 ## Project Overview
 
 This dashboard provides a comprehensive view of system analytics including:
@@ -178,7 +198,7 @@ Add more filtering options beyond the current period filter, such as filtering b
 | Project setup and configuration                         | 0.5 hour      |
 | Sidebar and layout components                           | 1 hours       |
 | Dashboard grid and card components                      | 3 hours       |
-| Chart implementations with Highcharts                   | 2 hours     |
+| Chart implementations with Highcharts                   | 2 hours       |
 | Data fetching with TanStack Query                       | 1.5 hours     |
 | Responsive design and styling                           | 2 hours       |
 | Refactoring and code optimization                       | 0.5 hours     |
@@ -189,11 +209,11 @@ Add more filtering options beyond the current period filter, such as filtering b
 
 ### Desktop
 
-![Desktop Screenshot 1](./screenshots/dashboard-d-1.png)
-![Desktop Screenshot 2](./screenshots/dashboard-d-1.png)
+<img src="./screenshots/dashboard-d-1.png" alt="Desktop Screenshot 1" width="600"><br /><br />
+<img src="./screenshots/dashboard-d-2.png" alt="Desktop Screenshot 2"  width="600">
 
 ### Mobile
 
-<img src="./screenshots/dashboard-m.png" alt="Mobile Screenshot" width="180">
+<img src="./screenshots/dashboard-m.png" alt="Mobile Screenshot" width="250">
 
 ---
