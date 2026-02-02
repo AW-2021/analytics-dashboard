@@ -58,8 +58,6 @@ const UserOverviewCard = () => {
               </div>
             </div>
           </div>
-
-          <div className="p-3"></div>
         </>
       )}
     </div>

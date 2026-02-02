@@ -21,7 +21,7 @@ const UniqueLoginsCard = () => {
   const { data: overViewData } = useAnalyticsOverview();
 
   return (
-    <div className="analytics-grid-three-quarter-span-item flex flex-col">
+    <div className="analytics-grid-three-quarter-span-item">
       {isFetching ? (
         <LoadingSpinner />
       ) : isError ? (
