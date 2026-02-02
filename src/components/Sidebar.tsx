@@ -17,7 +17,10 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
         </div>
 
         <button
+          type="button"
           onClick={() => setIsExpanded((prev) => !prev)}
+          aria-label="Toggle sidebar"
+          aria-expanded={isExpanded}
           className="absolute -right-3 top-7 w-6 h-6 bg-white border border-gray rounded-full flex items-center justify-center"
         >
           <ChevronRight

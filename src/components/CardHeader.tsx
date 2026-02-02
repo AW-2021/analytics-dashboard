@@ -13,7 +13,11 @@ const CardHeader = ({ title, data, barColor, onRefetch }: CardHeaderProps) => {
     <div className="flex flex-col">
       <div className="flex justify-between items-center p-3">
         <p className="font-medium text-lg">{title}</p>
-        <button onClick={onRefetch}>
+        <button
+          type="button"
+          onClick={onRefetch}
+          aria-label={`Refresh ${title}`}
+        >
           <RefreshButton size={16} />
         </button>
       </div>

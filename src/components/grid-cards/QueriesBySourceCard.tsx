@@ -17,7 +17,11 @@ const QueriesBySourceCard = () => {
         <>
           <div className="flex justify-between items-center p-3">
             <p className="font-medium text-lg">Queries By Source</p>
-            <button onClick={() => refetch()}>
+            <button
+              type="button"
+              onClick={() => refetch()}
+              aria-label="Refresh queries by source"
+            >
               <RefreshButton size={16} />
             </button>
           </div>

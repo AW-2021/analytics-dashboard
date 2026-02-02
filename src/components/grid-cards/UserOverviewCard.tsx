@@ -22,7 +22,11 @@ const UserOverviewCard = () => {
         <>
           <div className="flex justify-between items-center p-3">
             <p className="font-medium text-lg">Users</p>
-            <button onClick={() => refetch()}>
+            <button
+              type="button"
+              onClick={() => refetch()}
+              aria-label="Refresh user data"
+            >
               <RefreshButton size={16} />
             </button>
           </div>

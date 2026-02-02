@@ -6,7 +6,7 @@ interface RefreshButtonProps {
 
 const RefreshButton = ({ size = 24 }: RefreshButtonProps) => {
   return (
-    <button>
+    <button type="button" aria-label="Refresh data">
       <RotateCw size={size} />
     </button>
   );
