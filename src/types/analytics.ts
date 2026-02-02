@@ -1,3 +1,5 @@
+import { type UseQueryResult } from "@tanstack/react-query";
+
 export type AnalyticsOverview = {
   totalUsers: number;
   activeUsers: number;
@@ -32,3 +34,14 @@ export type DateRange = {
 };
 
 export type Period = 90 | 30 | 7;
+
+export interface AnalyticsCardProps {
+  title: string;
+  overviewKey: keyof AnalyticsOverview;
+  overviewSuffix?: string;
+  barColor: string;
+  gridClass: string;
+  chartWrapperClass?: string;
+  useDataHook: (period: Period) => UseQueryResult<TimeSeriesData[]>;
+  ChartComponent: React.ComponentType<{ data: TimeSeriesData[] }>;
+}
