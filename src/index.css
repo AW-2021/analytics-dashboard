@@ -12,16 +12,16 @@
 @theme inline {
   --font-jakarta:
     "Plus Jakarta Sans", "sans-serif"; /* Replacement for Circular Pro */
-  --font-avantgarde: "ITC Avant Garde Gothic Std Book", "sans-serif";
-  --color-dark-black: #1F2229;
-  --color-gray: #E9E9EA;
-  --color-gray-s80: #6F8990;
-  --color-dark-gray: #D2D3D4;
-  --color-green: #70B246;
-  --color-green-s40: #4B772F;
-  --color-green-t20: #84BD60;
-  --color-soft-green-t180: #F7FBF4;
-  --color-blue: #1CA8DD;
+  --color-dark-black: #1f2229;
+  --color-gray: #e9e9ea;
+  --color-gray-s80: #6f8990;
+  --color-dark-gray: #d2d3d4;
+  --color-dark-black-s70: #626469;
+  --color-green: #70b246;
+  --color-green-s40: #4b772f;
+  --color-green-t20: #84bd60;
+  --color-soft-green-t180: #f7fbf4;
+  --color-blue: #1ca8dd;
 }
 
 *,
@@ -64,8 +64,8 @@ main {
 }
 
 .analytics-grid-container > div {
-    border: 1px solid var(--color-gray);
-    border-radius: 4px;
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
 }
 
 .analytics-grid-item {
@@ -86,4 +86,10 @@ main {
 
 button {
   cursor: pointer;
+}
+
+@media (width < 640px) {
+  .analytics-grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
