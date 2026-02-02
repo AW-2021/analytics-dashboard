@@ -549,6 +549,12 @@
       "timestamp": 1769904000000,
       "date": "2026-02-01",
       "value": 5
+    },
+    {
+      "id": 91,
+      "timestamp": 1769990400000,
+      "date": "2026-02-02",
+      "value": 6
     }
   ],
   "queriesExecuted": [
@@ -1091,6 +1097,12 @@
       "timestamp": 1769904000000,
       "date": "2026-02-01",
       "value": 5469
+    },
+    {
+      "id": 91,
+      "timestamp": 1769990400000,
+      "date": "2026-02-02",
+      "value": 5124
     }
   ],
   "avgResponseTimeWorkflow": [
@@ -1633,6 +1645,12 @@
       "timestamp": 1769904000000,
       "date": "2026-02-01",
       "value": 12.66
+    },
+    {
+      "id": 91,
+      "timestamp": 1769990400000,
+      "date": "2026-02-02",
+      "value": 11.45
     }
   ],
   "firewallApiCalls": [
@@ -2175,6 +2193,12 @@
       "timestamp": 1769904000000,
       "date": "2026-02-01",
       "value": 1438
+    },
+    {
+      "id": 91,
+      "timestamp": 1769990400000,
+      "date": "2026-02-02",
+      "value": 1587
     }
   ],
   "avgResponseTimeFirewall": [
@@ -2717,6 +2741,12 @@
       "timestamp": 1769904000000,
       "date": "2026-02-01",
       "value": 2.34
+    },
+    {
+      "id": 91,
+      "timestamp": 1769990400000,
+      "date": "2026-02-02",
+      "value": 2.52
     }
   ],
   "queriesBySource": [
