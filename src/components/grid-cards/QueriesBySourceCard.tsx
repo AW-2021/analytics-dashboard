@@ -1,8 +1,8 @@
-import { useQueriesBySource } from "../hooks/useAnalyticsData";
-import ErrorMessage from "./ErrorMessage";
-import LoadingSpinner from "./LoadingSpinner";
-import RefreshButton from "./RefreshButton";
-import QueriesBySourceChart from "./charts/QueriesBySourceChart";
+import { useQueriesBySource } from "../../hooks/useAnalyticsData";
+import ErrorMessage from "../ErrorMessage";
+import LoadingSpinner from "../LoadingSpinner";
+import RefreshButton from "../RefreshButton";
+import QueriesBySourceChart from "../charts/QueriesBySourceChart";
 
 const QueriesBySourceCard = () => {
   const { data, isFetching, isError, error, refetch } = useQueriesBySource();

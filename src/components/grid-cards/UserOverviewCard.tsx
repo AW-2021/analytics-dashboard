@@ -1,8 +1,8 @@
-import RefreshButton from "./RefreshButton";
-import VerticalBar from "./VerticalBar";
-import { useAnalyticsOverview } from "../hooks/useAnalyticsData";
-import ErrorMessage from "./ErrorMessage";
-import LoadingSpinner from "./LoadingSpinner";
+import RefreshButton from "../RefreshButton";
+import VerticalBar from "../VerticalBar";
+import { useAnalyticsOverview } from "../../hooks/useAnalyticsData";
+import ErrorMessage from "../ErrorMessage";
+import LoadingSpinner from "../LoadingSpinner";
 
 const UserOverviewCard = () => {
   const {

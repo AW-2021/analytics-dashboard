@@ -1,12 +1,12 @@
 import {
   useAnalyticsOverview,
   useQueriesExecuted,
-} from "../hooks/useAnalyticsData";
-import ErrorMessage from "./ErrorMessage";
-import LoadingSpinner from "./LoadingSpinner";
-import CardHeader from "./CardHeader";
-import QueriesExecutedChart from "./charts/QueriesExecutedChart";
-import { usePeriodFilter } from "../context/PeriodFilterContext";
+} from "../../hooks/useAnalyticsData";
+import ErrorMessage from "../ErrorMessage";
+import LoadingSpinner from "../LoadingSpinner";
+import CardHeader from "../CardHeader";
+import QueriesExecutedChart from "../charts/QueriesExecutedChart";
+import { usePeriodFilter } from "../../context/PeriodFilterContext";
 
 const QueriesExecutedCard = () => {
   const { period } = usePeriodFilter();
@@ -30,7 +30,7 @@ const QueriesExecutedCard = () => {
         <>
           <CardHeader
             title="Queries Executed in the Workflow"
-            data={overViewData?.queriesExecuted ?? 0}
+            data={`${overViewData?.queriesExecuted}`}
             barColor="bg-green-t20"
             onRefetch={refetch}
           />

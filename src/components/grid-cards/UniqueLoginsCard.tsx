@@ -1,12 +1,12 @@
 import {
   useAnalyticsOverview,
   useUniqueLogins,
-} from "../hooks/useAnalyticsData";
-import ErrorMessage from "./ErrorMessage";
-import LoadingSpinner from "./LoadingSpinner";
-import CardHeader from "./CardHeader";
-import UniqueLoginsChart from "./charts/UniqueLoginsChart";
-import { usePeriodFilter } from "../context/PeriodFilterContext";
+} from "../../hooks/useAnalyticsData";
+import ErrorMessage from "../ErrorMessage";
+import LoadingSpinner from "../LoadingSpinner";
+import CardHeader from "../CardHeader";
+import UniqueLoginsChart from "../charts/UniqueLoginsChart";
+import { usePeriodFilter } from "../../context/PeriodFilterContext";
 
 const UniqueLoginsCard = () => {
   const { period } = usePeriodFilter();
@@ -30,7 +30,7 @@ const UniqueLoginsCard = () => {
         <>
           <CardHeader
             title="Number of Unique Logins"
-            data={overViewData?.uniqueLogins ?? 0}
+            data={`${overViewData?.uniqueLogins}`}
             barColor="bg-blue"
             onRefetch={refetch}
           />
