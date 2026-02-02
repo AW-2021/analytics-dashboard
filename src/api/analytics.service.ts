@@ -57,4 +57,27 @@ export const analyticsApi = {
       throw new Error("Failed to fetch average response time of workflows.");
     return response.json();
   },
+
+  getFirewallApiCalls: async (period: Period): Promise<TimeSeriesData[]> => {
+    const { startTimestamp, endTimestamp } = getDateRange(period);
+
+    const response = await fetch(
+      `${API_BASE}/firewallApiCalls?timestamp_gte=${startTimestamp}&timestamp_lte=${endTimestamp}&_sort=timestamp`,
+    );
+    if (!response.ok) throw new Error("Failed to fetch firewall API calls.");
+    return response.json();
+  },
+
+  getAvgResponseTimeFirewall: async (
+    period: Period,
+  ): Promise<TimeSeriesData[]> => {
+    const { startTimestamp, endTimestamp } = getDateRange(period);
+
+    const response = await fetch(
+      `${API_BASE}/avgResponseTimeFirewall?timestamp_gte=${startTimestamp}&timestamp_lte=${endTimestamp}&_sort=timestamp`,
+    );
+    if (!response.ok)
+      throw new Error("Failed to fetch average response time of firewall.");
+    return response.json();
+  },
 };
