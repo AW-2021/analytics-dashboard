@@ -17,6 +17,10 @@ export const analyticsKeys = {
   queriesBySource: () => [...analyticsKeys.all, "queriesBySource"] as const,
   avgResponseTimeWorkflow: (period: number) =>
     [...analyticsKeys.all, "avgResponseTimeWorkflow", period] as const,
+  firewallApiCalls: (period: number) =>
+    [...analyticsKeys.all, "firewallApiCalls", period] as const,
+  avgResponseTimeFirewall: (period: number) =>
+    [...analyticsKeys.all, "avgResponseTimeFirewall", period] as const,
 };
 
 export const useAnalyticsOverview = (): UseQueryResult<AnalyticsOverview> => {
@@ -66,6 +70,26 @@ export const useAvgResponseTimeWorkflow = (
   return useQuery({
     queryKey: analyticsKeys.avgResponseTimeWorkflow(period),
     queryFn: () => analyticsApi.getAvgResponseTimeWorkflow(period),
+    staleTime: 5 * 60 * 1000,
+  });
+};
+
+export const useFirewallApiCalls = (
+  period: Period,
+): UseQueryResult<TimeSeriesData[]> => {
+  return useQuery({
+    queryKey: analyticsKeys.firewallApiCalls(period),
+    queryFn: () => analyticsApi.getFirewallApiCalls(period),
+    staleTime: 5 * 60 * 1000,
+  });
+};
+
+export const useAvgResponseTimeFirewall = (
+  period: Period,
+): UseQueryResult<TimeSeriesData[]> => {
+  return useQuery({
+    queryKey: analyticsKeys.avgResponseTimeFirewall(period),
+    queryFn: () => analyticsApi.getAvgResponseTimeFirewall(period),
     staleTime: 5 * 60 * 1000,
   });
 };
