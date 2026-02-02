@@ -1,7 +1,13 @@
 import { RotateCw } from 'lucide-react';
+import { useQueryClient } from '@tanstack/react-query';
+import { analyticsKeys } from '../hooks/useAnalyticsData';
 
 const DashboardHeader = () => {
-  const handleRefreshAll = () => {}
+  const queryClient = useQueryClient();
+
+  const handleRefreshAll = () => {
+    queryClient.invalidateQueries({ queryKey: analyticsKeys.all });
+  };
 
   return (
     <div className="flex justify-between items-center ">
