@@ -22,6 +22,7 @@
   --color-green-t20: #84bd60;
   --color-soft-green-t180: #f7fbf4;
   --color-blue: #1ca8dd;
+  --color-blue-s50: #8dd3ee;
 }
 
 *,
@@ -58,7 +59,6 @@ main {
 
 .analytics-grid-container {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
@@ -91,5 +91,11 @@ button {
 @media (width < 640px) {
   .analytics-grid-container {
     grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  .analytics-grid-container > div {
+    grid-column: span 1;
+    max-width: 100%;
   }
 }
