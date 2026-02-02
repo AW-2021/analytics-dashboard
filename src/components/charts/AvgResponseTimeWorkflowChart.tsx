@@ -6,7 +6,7 @@ interface ChartProps {
   data: TimeSeriesData[];
 }
 
-const AvgResponseTimeChart = ({ data }: ChartProps) => {
+const AvgResponseTimeWorkflowChart = ({ data }: ChartProps) => {
   if (!data || data.length === 0) {
     return (
       <div className="h-full flex items-center justify-center text-gray-500">
@@ -19,7 +19,7 @@ const AvgResponseTimeChart = ({ data }: ChartProps) => {
     chart: {
       type: "area",
       backgroundColor: "transparent",
-      height: 300,
+      height: 222,
     },
     title: {
       text: "",
@@ -61,7 +61,6 @@ const AvgResponseTimeChart = ({ data }: ChartProps) => {
     plotOptions: {
       area: {
         fillColor: "rgba(181, 215, 160, 0.2)",
-        fillOpacity: 0.1,
         lineColor: "#84BD60",
         lineWidth: 2,
         marker: {
@@ -96,4 +95,4 @@ const AvgResponseTimeChart = ({ data }: ChartProps) => {
   return <HighchartsReact highcharts={Highcharts} options={chartOptions} />;
 };
 
-export default AvgResponseTimeChart;
+export default AvgResponseTimeWorkflowChart;
