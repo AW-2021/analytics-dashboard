@@ -3,6 +3,7 @@ import { analyticsApi } from "../api/analytics.service";
 import {
   type AnalyticsOverview,
   type Period,
+  type SourceData,
   type TimeSeriesData,
 } from "../types/analytics";
 
@@ -14,6 +15,8 @@ export const analyticsKeys = {
   queriesExecuted: (period: number) =>
     [...analyticsKeys.all, "queriesExecuted", period] as const,
   queriesBySource: () => [...analyticsKeys.all, "queriesBySource"] as const,
+  avgResponseTimeWorkflow: (period: number) =>
+    [...analyticsKeys.all, "avgResponseTimeWorkflow", period] as const,
 };
 
 export const useAnalyticsOverview = (): UseQueryResult<AnalyticsOverview> => {
@@ -48,11 +51,21 @@ export const useQueriesExecuted = (
   });
 };
 
-export const useQueriesBySource = () => {
+export const useQueriesBySource = (): UseQueryResult<SourceData[]> => {
   return useQuery({
     queryKey: analyticsKeys.queriesBySource(),
     queryFn: analyticsApi.getQueriesBySource,
     staleTime: 5 * 60 * 1000,
     refetchOnWindowFocus: true,
+  });
+};
+
+export const useAvgResponseTimeWorkflow = (
+  period: Period,
+): UseQueryResult<TimeSeriesData[]> => {
+  return useQuery({
+    queryKey: analyticsKeys.avgResponseTimeWorkflow(period),
+    queryFn: () => analyticsApi.getAvgResponseTimeWorkflow(period),
+    staleTime: 5 * 60 * 1000,
   });
 };
