@@ -14,7 +14,7 @@ const UniqueLoginsChart = ({ data }: ChartProps) => {
       </div>
     );
   }
-  
+
   const chartOptions: Highcharts.Options = {
     chart: {
       type: "column",
@@ -52,7 +52,9 @@ const UniqueLoginsChart = ({ data }: ChartProps) => {
           color: "#666",
         },
         formatter: function () {
-          return this.value >= '1000' ? `${Number(this.value) / 1000}k` : `${this.value}`;
+          return this.value >= "1000"
+            ? `${Number(this.value) / 1000}k`
+            : `${this.value}`;
         },
       },
       gridLineColor: "#f0f0f0",

@@ -5,8 +5,13 @@ import ErrorMessage from "./ErrorMessage";
 import LoadingSpinner from "./LoadingSpinner";
 
 const UserOverviewCard = () => {
-  const { data: userOverview, isFetching, error, refetch } = useAnalyticsOverview();
-  
+  const {
+    data: userOverview,
+    isFetching,
+    error,
+    refetch,
+  } = useAnalyticsOverview();
+
   return (
     <div className="analytics-grid-quarter-span-item flex flex-col">
       {error ? (
@@ -27,7 +32,9 @@ const UserOverviewCard = () => {
               <VerticalBar barStyle="min-h-10 bg-blue" />
               <div className="flex flex-col gap-1">
                 <p>Total Users</p>
-                <p className="font-medium text-[32px]">{userOverview?.totalUsers}</p>
+                <p className="font-medium text-[32px]">
+                  {userOverview?.totalUsers}
+                </p>
               </div>
             </div>
 
@@ -35,7 +42,9 @@ const UserOverviewCard = () => {
               <VerticalBar barStyle="min-h-10 bg-green-t20" />
               <div className="flex flex-col gap-1">
                 <p>Active</p>
-                <p className="font-medium text-[32px]">{userOverview?.activeUsers}</p>
+                <p className="font-medium text-[32px]">
+                  {userOverview?.activeUsers}
+                </p>
               </div>
             </div>
 
@@ -43,7 +52,9 @@ const UserOverviewCard = () => {
               <VerticalBar barStyle="min-h-10 bg-gray-s80" />
               <div className="flex flex-col gap-1">
                 <p>Inactive</p>
-                <p className="font-medium text-[32px]">{userOverview?.inactiveUsers}</p>
+                <p className="font-medium text-[32px]">
+                  {userOverview?.inactiveUsers}
+                </p>
               </div>
             </div>
           </div>

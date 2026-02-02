@@ -16,7 +16,7 @@ const UniqueLoginsCard = () => {
     isFetching,
     isError,
     error,
-    refetch
+    refetch,
   } = useUniqueLogins(period);
   const { data: overViewData } = useAnalyticsOverview();
 
