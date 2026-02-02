@@ -28,7 +28,6 @@ export const useAnalyticsOverview = (): UseQueryResult<AnalyticsOverview> => {
     queryKey: analyticsKeys.overview(),
     queryFn: analyticsApi.getOverView,
     staleTime: 5 * 60 * 1000,
-    refetchOnWindowFocus: true,
   });
 };
 
@@ -39,7 +38,6 @@ export const useUniqueLogins = (
     queryKey: analyticsKeys.uniqueLogins(period),
     queryFn: () => analyticsApi.getUniqueLogins(period),
     staleTime: 5 * 60 * 1000,
-    refetchInterval: 3 * 60 * 1000,
   });
 };
 
@@ -50,8 +48,6 @@ export const useQueriesExecuted = (
     queryKey: analyticsKeys.queriesExecuted(period),
     queryFn: () => analyticsApi.getQueriesExecuted(period),
     staleTime: 5 * 60 * 1000,
-    refetchInterval: 3 * 60 * 1000,
-    refetchOnWindowFocus: true,
   });
 };
 
@@ -60,7 +56,6 @@ export const useQueriesBySource = (): UseQueryResult<SourceData[]> => {
     queryKey: analyticsKeys.queriesBySource(),
     queryFn: analyticsApi.getQueriesBySource,
     staleTime: 5 * 60 * 1000,
-    refetchOnWindowFocus: true,
   });
 };
 
