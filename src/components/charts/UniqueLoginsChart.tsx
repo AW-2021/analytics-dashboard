@@ -9,7 +9,7 @@ interface ChartProps {
 const UniqueLoginsChart = ({ data }: ChartProps) => {
   if (!data || data.length === 0) {
     return (
-      <div className="h-64 flex items-center justify-center text-gray-400">
+      <div className="h-full flex items-center justify-center text-gray-500">
         No data available
       </div>
     );
