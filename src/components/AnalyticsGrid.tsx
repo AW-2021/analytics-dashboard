@@ -1,7 +1,8 @@
-import QueriesBySourceCard from "./QueriesBySourceCard";
-import QueriesExecutedCard from "./QueriesExecutedCard";
-import UniqueLoginsCard from "./UniqueLoginsCard";
-import UserOverviewCard from "./UserOverviewCard";
+import AvgResponseTimeCard from "./grid-cards/AvgResponseTimeCard";
+import QueriesBySourceCard from "./grid-cards/QueriesBySourceCard";
+import QueriesExecutedCard from "./grid-cards/QueriesExecutedCard";
+import UniqueLoginsCard from "./grid-cards/UniqueLoginsCard";
+import UserOverviewCard from "./grid-cards/UserOverviewCard";
 
 const AnalyticsGrid = () => {
   return (
@@ -10,7 +11,7 @@ const AnalyticsGrid = () => {
       <UniqueLoginsCard />
       <QueriesExecutedCard />
       <QueriesBySourceCard />
-      <div className="analytics-grid-full-span-item"></div>
+      <AvgResponseTimeCard />
       <div className="analytics-grid-item"></div>
       <div className="analytics-grid-item"></div>
     </div>
