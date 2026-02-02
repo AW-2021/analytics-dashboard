@@ -3,6 +3,7 @@ import { usePeriodFilter } from "../../context/PeriodFilterContext";
 import ErrorMessage from "../ErrorMessage";
 import LoadingSpinner from "../LoadingSpinner";
 import CardHeader from "../CardHeader";
+import { formatCompactNumber } from "../../utils/formatters";
 import type { AnalyticsCardProps } from "../../types/analytics";
 
 const AnalyticsCard = ({
@@ -29,7 +30,7 @@ const AnalyticsCard = ({
         <>
           <CardHeader
             title={title}
-            data={`${overviewData?.[overviewKey]}${overviewSuffix}`}
+            data={`${overviewSuffix === "s" ? overviewData?.[overviewKey] : formatCompactNumber(overviewData?.[overviewKey] ?? 0)}${overviewSuffix}`}
             barColor={barColor}
             onRefetch={refetch}
           />
