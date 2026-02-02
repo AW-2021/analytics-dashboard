@@ -209,11 +209,11 @@ Add more filtering options beyond the current period filter, such as filtering b
 
 ### Desktop
 
-<img src="./screenshots/dashboard-d-1.png" alt="Desktop Screenshot 1" width="600"><br /><br />
-<img src="./screenshots/dashboard-d-2.png" alt="Desktop Screenshot 2"  width="600">
+<img src="./screenshots/dashboard-d-1.png" alt="Desktop Screenshot 1"><br /><br />
+<img src="./screenshots/dashboard-d-2.png" alt="Desktop Screenshot 2">
 
 ### Mobile
 
-<img src="./screenshots/dashboard-m.png" alt="Mobile Screenshot" width="250">
+<img src="./screenshots/dashboard-m.png" alt="Mobile Screenshot" width="300">
 
 ---
