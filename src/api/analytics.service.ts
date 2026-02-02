@@ -43,4 +43,18 @@ export const analyticsApi = {
     if (!response.ok) throw new Error("Failed to fetch queries by source.");
     return response.json();
   },
+
+  getAvgResponseTimeWorkflow: async (
+    period: Period,
+  ): Promise<TimeSeriesData[]> => {
+    const { startTimestamp, endTimestamp } = getDateRange(period);
+
+    const response = await fetch(
+      `${API_BASE}/avgResponseTimeWorkflow?timestamp_gte=${startTimestamp}&timestamp_lte=${endTimestamp}&_sort=timestamp`,
+    );
+
+    if (!response.ok)
+      throw new Error("Failed to fetch average response time of workflows.");
+    return response.json();
+  },
 };
