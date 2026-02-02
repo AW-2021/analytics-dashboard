@@ -3,7 +3,7 @@ import VerticalBar from "./VerticalBar";
 
 interface CardHeaderProps {
   title: string;
-  data: number;
+  data: string;
   barColor: string;
   onRefetch?: () => void;
 }
